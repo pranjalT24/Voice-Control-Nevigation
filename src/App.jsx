@@ -15,12 +15,11 @@ function App() {
   const commands=[{
     command:["Go to *","Open *"],
     callback:(redirectPage)=>{
-   
+      console.log(redirectPage);
      return setreDirectUrl(redirectPage)},
   },];
-console.log(commands);
   const pages=["home","about","contact","service"]
- 
+console.log(commands);
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition) {
     return null
@@ -30,6 +29,7 @@ console.log(commands);
 
   if (reDirectUrl) {
     if (pages.includes(reDirectUrl)) {
+      console.log(reDirectUrl);
       history.push(reDirectUrl)
     }
     else{
