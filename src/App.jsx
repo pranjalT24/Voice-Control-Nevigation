@@ -18,7 +18,7 @@ function App() {
    
      return setreDirectUrl(redirectPage)},
   },];
-  commands;
+console.log(commands);
   const pages=["home","about","contact","service"]
  
 
