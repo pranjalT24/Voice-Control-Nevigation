@@ -6,7 +6,7 @@ import About from "./About"
 import Service from "./Service"
 import Contact from "./Contact"
 import { Route,Switch, useHistory} from "react-router-dom"
-import SpeechRecognition from 'react-speech-recognition';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 function App() {
   var history=useHistory()
@@ -19,8 +19,8 @@ function App() {
      return setreDirectUrl(redirectPage)},
   },];
   const pages=["home","about","contact","service"]
-console.log(commands);
-
+  const {transcript}=useSpeechRecognition({commands})
+  console.log(transcript);
   if (!SpeechRecognition.browserSupportsSpeechRecognition) {
     return null
   }
