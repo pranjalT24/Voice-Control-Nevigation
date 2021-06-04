@@ -6,7 +6,7 @@ import About from "./About"
 import Service from "./Service"
 import Contact from "./Contact"
 import { Route,Switch, useHistory} from "react-router-dom"
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import SpeechRecognition from 'react-speech-recognition';
 
 function App() {
   var history=useHistory()
@@ -18,6 +18,7 @@ function App() {
    
      return setreDirectUrl(redirectPage)},
   },];
+  commands;
   const pages=["home","about","contact","service"]
  
 
